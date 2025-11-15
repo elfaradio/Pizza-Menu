@@ -47,15 +47,27 @@ const pizzaData = [
 function App() {
     return (
         <>
-            <h1>hello icpc alam!!!</h1>
+            <Header>  </Header>
             <p>Se CP kore</p>
             <Pizza />
             <Pizza />
             <Pizza />
+            <Footer></Footer>
+
         </>
     );
 }
+function Header() {
+    return <h1>Fast React Pizza Company</h1>
+}
+function Menu() { return }
+function Footer() {
+    return (
+        <footer>We Are Open</footer>
 
+
+    );
+}
 function Pizza() {
     return (
         <>
