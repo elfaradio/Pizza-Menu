@@ -63,7 +63,7 @@ function Header() {
 
     return (
         <header className="header">
-            <h1 style={style}>Fast React Pizza Co.</h1>
+            <h1 style={style}>Fast  Pizza Co.</h1>
         </header>
     );
 }
@@ -72,6 +72,7 @@ function Menu() {
     const pizzas = pizzaData;
     // const pizzas = [];
     const numPizzas = pizzas.length;
+    // {true && 2} 2 print hobe
 
     return (
         <main className="menu">
@@ -121,14 +122,15 @@ function Pizza({ pizzaObj }) {
             <div>
                 <h3>{pizzaObj.name}</h3>
                 <p>{pizzaObj.ingredients}</p>
+                <button style={{ color: "yellow", borderRadius: "25px", backgroundColor: "black" }}>Order</button>
 
                 {/* {pizzaObj.soldOut ? (
           <span>SOLD OUT</span>
         ) : (
           <span>{pizzaObj.price}</span>
         )} */}
-
-                <span>{pizzaObj.soldOut ? "SOLD OUT" : pizzaObj.price}</span>
+                {/* <h1></h1> */}
+                <span> Stock: {pizzaObj.soldOut ? "SOLD OUT" : pizzaObj.price}</span>
             </div>
         </li>
     );
@@ -136,8 +138,8 @@ function Pizza({ pizzaObj }) {
 
 function Footer() {
     const hour = new Date().getHours();
-    const openHour = 12;
-    const closeHour = 22;
+    const openHour = 0;
+    const closeHour = 24;
     const isOpen = hour >= openHour && hour <= closeHour;
     console.log(isOpen);
 
